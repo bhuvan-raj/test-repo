@@ -8,6 +8,9 @@ jobs:
  build-using-maven:
    runs-on: ubuntu-latest
    steps:
+     - name: Checkout
+       uses: actions/checkout@v6.0.1
+   
      - name: building using maven
        run: mvn -B package
 
