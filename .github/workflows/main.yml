@@ -1,0 +1,15 @@
+name: demo ci
+
+on:
+ workflow_dispatch:
+
+jobs:
+
+ build-using-maven:
+   runs-on: ubuntu-latest
+   steps:
+     - name: building using maven
+       run: mvn -B package
+
+     - name: listing the artifact
+       run: ls -lh target/
